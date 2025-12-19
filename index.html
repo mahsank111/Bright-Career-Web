@@ -15,25 +15,40 @@
   <header>
     <nav>
       <div class="logo">Bright Career Placements</div>
-      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+      <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle menu">
+        <!-- Menu Icon (Hamburger) -->
+        <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white"
+          stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+        <!-- Close Icon (X) -->
+        <svg class="close-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white"
+          stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
       <ul class="nav-links" id="navLinks">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#training">Training</a></li>
-        <li><a href="#industries">Industries</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#home" onclick="closeMenu()">Home</a></li>
+        <li><a href="#about" onclick="closeMenu()">About</a></li>
+        <li><a href="#services" onclick="closeMenu()">Services</a></li>
+        <li><a href="#training" onclick="closeMenu()">Training</a></li>
+        <li><a href="#industries" onclick="closeMenu()">Industries</a></li>
+        <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
       </ul>
     </nav>
   </header>
 
+
   <!-- Hero Section -->
   <section id="home" class="hero"
-    style="background-image: linear-gradient(135deg, rgba(66, 135, 245, 0.4) 0%, rgba(255, 255, 255, 0.4) 100%), url('hero3.jpg'); background-size: cover; background-position: center;">
+    style="background: linear-gradient(135deg, rgba(102, 126, 234, 0.95) 0%, rgba(118, 75, 162, 0.95) 100%); background-size: cover; background-position: center;">
     <div class="container">
       <div class="hero-content">
-        <h1>Shaping Careers. Creating Futures.</h1>
-        <p>Your Trusted Partner in Training and Placement</p>
+        <h1>Shaping Careers, Creating Futures.</h1>
+        <p class="hero-tagline">Your Trusted Partner in Training and Placement</p>
         <div class="hero-intro">
           <p>We connect talented job seekers with employers through interview training and placement services.</p>
         </div>
@@ -43,6 +58,10 @@
           <a href="#contact" class="btn btn-secondary">Hire Trained Candidates</a>
         </div>
       </div>
+    </div>
+    <!-- Hero Image -->
+    <div class="hero-image">
+      <img src="images/customer-support.png" alt="Career Placement" />
     </div>
   </section>
 
@@ -196,19 +215,19 @@
           </p>
         </div>
         <div class="benefit-item">
-          <div class="benefit-icon">🎯</div>
+          <div class="benefit-icon"><img src="images/Specific.png" alt="icon" height="46 px" width="46 px"></div>
           <h3>Industry-Specific Solutions</h3>
           <p>Deep understanding of BPO, IT, and various industry requirements ensures perfect candidate-role alignment.
           </p>
         </div>
         <div class="benefit-item">
-          <div class="benefit-icon">🤝</div>
+          <div class="benefit-icon"><img src="images/Transperent.png" alt="icon" height="46 px" width="46 px"></div>
           <h3>Transparent Process</h3>
           <p>Clear communication, honest feedback, and ethical practices in all our interactions with candidates and
             employers.</p>
         </div>
         <div class="benefit-item">
-          <div class="benefit-icon">💼</div>
+          <div class="benefit-icon"><img src="images/sucess.png" alt="icon" height="48 px" width="48 px"></div>
           <h3>Professional Excellence</h3>
           <p>Committed to maintaining the highest standards of professionalism in recruitment and training services.</p>
         </div>
@@ -216,33 +235,118 @@
     </div>
   </section>
 
+  <!-- Testimonials Section -->
+  <section id="testimonials">
+    <div class="container">
+
+      <h2 class="section-title">What Our Clients Say</h2>
+      <p class="section-subtitle">
+        Trusted by professionals and organizations across industries
+      </p>
+
+      <div class="testimonial-carousel">
+
+        <div class="testimonial-card">
+          <p class="testimonial-text">
+            “Bright Career Placement helped us scale our hiring faster than expected.
+            Their understanding of industry needs is impressive.”
+          </p>
+          <h4 class="testimonial-name">Rohit Sharma</h4>
+          <span class="testimonial-role">HR Manager, IT Firm</span>
+        </div>
+
+        <div class="testimonial-card">
+          <p class="testimonial-text">
+            “Professional, responsive, and reliable.
+            We received quality candidates within a very short timeframe.”
+          </p>
+          <h4 class="testimonial-name">Ananya Verma</h4>
+          <span class="testimonial-role">Recruitment Lead, BPO</span>
+        </div>
+
+        <div class="testimonial-card">
+          <p class="testimonial-text">
+            “Their US staffing expertise and transparent process
+            made them our long-term hiring partner.”
+          </p>
+          <h4 class="testimonial-name">Michael Johnson</h4>
+          <span class="testimonial-role">Staffing Director, USA</span>
+        </div>
+
+        <div class="testimonial-card">
+          <p class="testimonial-text">
+            “Bright Career Placement has been a dependable hiring partner for us.
+            Their screening process ensured we received candidates who were job-ready.”
+          </p>
+          <h4 class="testimonial-name">Amit Singh</h4>
+          <span class="testimonial-role">Talent Acquisition Manager, TechNova Solutions</span>
+        </div>
+
+        <div class="testimonial-card">
+          <p class="testimonial-text">
+            “What sets them apart is their clarity and commitment.
+            The turnaround time and candidate quality consistently met our expectations.”
+          </p>
+          <h4 class="testimonial-name">Priya Mehta</h4>
+          <span class="testimonial-role">HR Business Partner, FinEdge Services</span>
+        </div>
+
+        <div class="testimonial-card">
+          <p class="testimonial-text">
+            “We have collaborated with Bright Career Placement for multiple roles.
+            Their understanding of both IT and non-IT hiring is commendable.”
+          </p>
+          <h4 class="testimonial-name">Rakesh Kumar</h4>
+          <span class="testimonial-role">Operations Head, Apex BPO Services</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+
   <!-- Industries Section -->
   <section id="industries">
     <div class="container">
       <h2 class="section-title">Industries We Serve</h2>
       <p class="section-subtitle">Connecting talent across diverse sectors</p>
-      <div class="industries-grid">
-        <div class="industry-card" data-icon="☎">
+
+      <div class="industries-carousel">
+
+        <div class="industry-card">
+          <img src="images/customer-service.png" alt="BPO">
           <h3>BPO & Call Centers</h3>
         </div>
-        <div class="industry-card" data-icon="🌍">
+
+        <div class="industry-card">
+          <img src="images/staffing.png" alt="US Staffing">
           <h3>US Staffing</h3>
         </div>
-        <div class="industry-card" data-icon="💻">
+
+        <div class="industry-card">
+          <img src="images/technical-support.png" alt="IT">
           <h3>IT & Non-IT</h3>
         </div>
-        <div class="industry-card" data-icon="🛒">
+
+        <div class="industry-card">
+          <img src="images/shopping.png" alt="Ecommerce">
           <h3>E-commerce</h3>
         </div>
-        <div class="industry-card" data-icon="🏦">
+
+        <div class="industry-card">
+          <img src="images/insurance-company.png" alt="Banking">
           <h3>Banking & Financial Services</h3>
         </div>
-        <div class="industry-card" data-icon="📢">
+        <div class="industry-card">
+          <img src="images/sales.png" alt="Marketing">
           <h3>Sales & Marketing</h3>
         </div>
+
       </div>
     </div>
   </section>
+
 
   <!-- Contact Section -->
   <section id="contact">
@@ -385,6 +489,33 @@
   </footer>
 
   <script>
+
+    const testimonialCarousel = document.querySelector('.testimonial-carousel');
+
+    setInterval(() => {
+      testimonialCarousel.scrollBy({ left: 380, behavior: 'smooth' });
+
+      if (
+        testimonialCarousel.scrollLeft + testimonialCarousel.clientWidth >=
+        testimonialCarousel.scrollWidth
+      ) {
+        testimonialCarousel.scrollTo({ left: 0, behavior: 'smooth' });
+      }
+    }, 3000);
+
+    const carousel = document.querySelector('.industries-carousel');
+
+    setInterval(() => {
+      carousel.scrollBy({ left: 300, behavior: 'smooth' });
+
+      if (
+        carousel.scrollLeft + carousel.clientWidth >=
+        carousel.scrollWidth
+      ) {
+        carousel.scrollTo({ left: 0, behavior: 'smooth' });
+      }
+    }, 3000);
+
     function toggleMenu() {
       const navLinks = document.getElementById('navLinks');
       navLinks.classList.toggle('active');
@@ -539,6 +670,45 @@
           document.getElementById('navLinks').classList.remove('active');
         }
       });
+    });
+
+    // Toggle function
+    function toggleMenu() {
+      const navLinks = document.getElementById('navLinks');
+      const menuToggle = document.querySelector('.menu-toggle');
+      const body = document.body;
+
+      navLinks.classList.toggle('active');
+      menuToggle.classList.toggle('active');
+      body.classList.toggle('menu-open');
+    }
+
+    function closeMenu() {
+      const navLinks = document.getElementById('navLinks');
+      const menuToggle = document.querySelector('.menu-toggle');
+      const body = document.body;
+
+      navLinks.classList.remove('active');
+      menuToggle.classList.remove('active');
+      body.classList.remove('menu-open');
+    }
+
+    // Close menu when clicking outside
+    document.addEventListener('click', function (event) {
+      const navLinks = document.getElementById('navLinks');
+      const menuToggle = document.querySelector('.menu-toggle');
+      const nav = document.querySelector('nav');
+
+      if (!nav.contains(event.target) && navLinks.classList.contains('active')) {
+        closeMenu();
+      }
+    });
+
+    // Close menu on window resize
+    window.addEventListener('resize', function () {
+      if (window.innerWidth > 992) {
+        closeMenu();
+      }
     });
   </script>
 </body>
